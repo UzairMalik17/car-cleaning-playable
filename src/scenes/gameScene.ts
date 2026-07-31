@@ -36,6 +36,7 @@ export class GameScene extends Phaser.Scene {
     this.timerText = this.add
       .text(360, 160, `TIME: ${this.timeLeft}s`, {
         fontSize: "24px",
+        fontStyle: "bold",
         color: "#f1c40f",
       })
       .setOrigin(0.5);
@@ -98,6 +99,10 @@ export class GameScene extends Phaser.Scene {
   private tickTimer() {
     this.timeLeft--;
     this.timerText.setText(`TIME: ${this.timeLeft}s`);
+
+    if (this.timeLeft === 5) {
+      this.timerText.setColor("#E74C3C");
+    }
 
     if (this.timeLeft <= 0) {
       this.timerEvent.destroy();

@@ -1,4 +1,4 @@
-# Car Cleaning Playable Ad
+# Car Cleaning Playable
 
 ## Description
 
